@@ -15,10 +15,11 @@
 .depoimento-conteudo {
   padding: 40px 40px 80px 80px;
   align-self: end;
+  background: url("../../img/dec/bottom-right-p.svg") no-repeat bottom 40px right 40px;
 }
 
 .depoimento-conteudo p {
-  max-width: 32ch;
+  max-width: 25ch;
   font-family: "Merriweather", serif;
   font-style: italic;
   font-weight: 900;
@@ -43,7 +44,21 @@
   content: '”';
 }
 
-@media (max-width:800px) {
+@media (min-width: 1200px) {
+  .depoimento img {
+    max-height: 650px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .depoimento-conteudo {
+    background: none;
+    padding: 40px 40px 80px 80px;
+    align-self: end;
+  }
+} 
+
+@media (max-width: 800px) {
   .depoimento {
     grid-template-columns: 1fr;
     text-align: center;
@@ -53,6 +68,6 @@
   }
   .depoimento-conteudo {
     padding: 40px 20px;
-    justify-self: center;
+    margin: auto;
   }
 }
